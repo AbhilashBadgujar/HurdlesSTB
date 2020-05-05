@@ -1,0 +1,78 @@
+var CANVAS_WIDTH = 1050;
+var CANVAS_HEIGHT = 538;
+
+var EDGEBOARD_X = 126;
+var EDGEBOARD_Y = 14;
+
+var LOCALSTORAGE_STRING = "hurdles_";
+var FPS = 30;
+var FPS_TIME      = 1000/FPS;
+var DISABLE_SOUND_MOBILE = false;
+var FONT_GAME = "montserratextrabold_italic";
+
+var STATE_LOADING    = 0;
+var STATE_MENU       = 1;
+var STATE_MENU_LEVEL = 2;
+var STATE_SELECT_TEAM = 3;
+var STATE_GAME       = 4;
+
+var ON_MOUSE_DOWN = 0;
+var ON_MOUSE_UP   = 1;
+var ON_MOUSE_OVER = 2;
+var ON_MOUSE_OUT  = 3;
+var ON_BUT_YES_DOWN = 4;
+var ON_BACK_MENU = 5;
+var ON_RESTART = 6;
+var ON_NEXT_LEVEL = 7; 
+var ON_END_LOADING = 8;
+var ON_JUMP = 9;
+var ON_ARRIVAL = 10;
+var ON_PLAYER_ARRIVED = 11;
+var ON_SHOW_JUMP_AREA = 12;
+var ON_REFRESH_TUTORIAL_INFO = 13;
+
+const PLAYER_ANIM_PREPARE_START = 0;
+const PLAYER_ANIM_START = 1;
+const PLAYER_ANIM_RUN = 2;
+const PLAYER_ANIM_JUMP = 3;
+
+
+var NUM_LEVELS = 12;
+var NUM_TEAMS = 8;
+
+
+var NUM_COLS_PAGE_LEVEL = 6;
+var NUM_ROWS_PAGE_LEVEL = 2;
+var SOUNDTRACK_VOLUME_IN_GAME  = 0;
+
+
+
+var ENABLE_FULLSCREEN;
+var ENABLE_CHECK_ORIENTATION;
+
+
+/////////////////////////////////
+var TEAM_IN_LANE = [0,1,2,3,4,5,6,7];
+var PLAYER_LANE_INDEX = 4;
+
+
+
+
+
+var PLAYER_POS = {x:CANVAS_WIDTH/2,y:451};
+var OBSTACLE_WIDTH = 364;
+var OBSTACLE_HEIGHT = 176;
+var TIME_SPAWN_OBSTACLE = 3000;
+var JUMP_Y_CHECKPOINT = 444;
+var MAX_PERFECT_JUMP_OPPONENT = [4,4,4,4,4,4,4,4,4,3,3,3];
+var TIME_DECREASE_LERP = 3000;
+
+var JUMP_PERFECT = 0;
+var JUMP_GOOD = 1;
+var JUMP_BAD = 2;
+
+var SCORE_JUMP = new Array();
+
+var DIFFICULTY_EASY = 0;
+var DIFFICULTY_MEDIUM = 1;
+var DIFFICULTY_HARD = 2;
